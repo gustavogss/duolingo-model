@@ -4,3 +4,5 @@
 - Next
 - Typescript
 - Shadcn
+- Gitflow
+- 

@@ -3,6 +3,12 @@ import { ClerkLoading, ClerkLoaded, SignedIn, SignedOut, SignUpButton, SignInBut
 import { Loader } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  icons: "./assets/mascot.svg",
+  title: "Davilingo"
+}
 
 export default function Home() {
   return (

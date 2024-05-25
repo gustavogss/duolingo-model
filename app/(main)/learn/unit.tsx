@@ -1,4 +1,5 @@
 import { lessons, units } from "@/db/schema";
+import { UnitBanner } from "./unit-banner";
 
 type UnitProps = {
   id: number;
@@ -17,7 +18,7 @@ type UnitProps = {
 export function Unit({ id, order, title, description, lessons, activeLesson, activeLessonPercentage }: UnitProps) {
   return (
     <>
-      {/* <UnitBanner /> */}
+      <UnitBanner title={title} description={description} />
     </>
   )
 }

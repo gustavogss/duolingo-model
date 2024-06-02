@@ -3,6 +3,8 @@
 import { challenges, challengeOptions } from "@/db/schema";
 import { useState } from "react";
 import { Header } from "./header";
+import { QuestionBubble } from "./question-bubble";
+import { Challenge } from "./challenge";
 
 type QuizProps = {
   initialLessonId: number;
@@ -32,6 +34,7 @@ export function Quiz({
   });
 
   const challenge = challenges[activeIndex];
+  const options = challenge?.challengeOptions ?? [];
 
   const title = challenge.type === 'ASSIST' ? "Select the correct meaming"
     : challenge.question;
@@ -49,7 +52,18 @@ export function Quiz({
             <h1 className="tex-lg lg:text-3xl text-center lg:text-start font-bold text-neutral-700">
               {title}
             </h1>
-            <div className=""></div>
+            <div className="">
+              {challenge.type === 'ASSIST' && (
+                <QuestionBubble question={challenge.question} />)}
+              <Challenge
+                options={options}
+                onSelect={() => { }}
+                status="none"
+                selectedOption={undefined}
+                disabled={false}
+                type={challenge.type}
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -118,7 +118,7 @@ const main = async () => {
         imageSrc: "./assets/man.svg",
         correct: true,
         text: "the man",
-        audioSrc: "./assets/es_man.mp3",
+        audioSrc: "./assets/audio/the-man.mp3",
       },
       {
         id: 2,
@@ -126,7 +126,7 @@ const main = async () => {
         imageSrc: "./assets/woman.svg",
         correct: false,
         text: "the woman",
-        audioSrc: "./assets/es_woman.mp3",
+        audioSrc: "./assets/audio/the-woman.mp3",
       },
       {
         id: 3,
@@ -134,10 +134,10 @@ const main = async () => {
         imageSrc: "./assets/robot.svg",
         correct: false,
         text: "the robot",
-        audioSrc: "./assets/es_robot.mp3",
+        audioSrc: "./assets/audio/the-robot.mp3",
       },
     ]);
-    // await db.insert(schema.challengeProgress).values([]);
+   
 
     console.log("Seedind finished");
   } catch (error) {

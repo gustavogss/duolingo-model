@@ -1,6 +1,8 @@
 import { challenges } from "@/db/schema";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useCallback } from "react";
+import {useAudio, useKey} from "react-use";
 
 type CardProps = {
   id: number;
@@ -27,6 +29,14 @@ export function Card({
   disabled,
   type,
 }: CardProps) {
+  const [audio, _, controls] = useAudio({src: audioSrc || ""});
+  const handleClick= useCallback(()=>{
+    if(disabled) return;
+    controls.play();
+    onClick();
+  }, [disabled, onClick, controls]);
+  useKey(shortcut, handleClick, {}, [handleClick]);
+
   return (
     <div className={cn(
       "h-full border-2 rounded-xl border-d-4 hover:bg-black/5 p-4 lg:p-6 cursor-pointer active:border-b-2",
@@ -41,8 +51,9 @@ export function Card({
       type === "ASSIST" && "lg:p-3 w-full",
 
     )}
-      onClick={() => { }}
+      onClick={handleClick}
     >
+      {audio}
       {imageSrc && (
         <div className="relative aspect-square mb-4 max-h-[80px] lg:max-h-[150px] w-full">
           <Image

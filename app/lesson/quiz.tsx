@@ -35,13 +35,38 @@ export function Quiz({
   });
   const [selectedOption, setSelectedOption] = useState<number>();
   const [status, setStatus] = useState<"correct" | "wrong" | "none">("none");
+
   const challenge = challenges[activeIndex];
   const options = challenge?.challengeOptions ?? [];
 
-  const onSelect = (id: number) =>{
-    if(status !== "none") return;
+  const onNext = () => {
+    setActiveIndex((current) => current + 1);
+  };
+
+  const onSelect = (id: number) => {
+    if (status !== "none") return;
     setSelectedOption(id);
   }
+
+  const onContinue = () => {
+    if (!selectedOption) return;
+
+    if (status === "wrong") {
+      setStatus("none");
+      setSelectedOption(undefined);
+      return;
+    }
+
+    if (status === "correct") {
+      onNext();
+      setStatus("none");
+      setSelectedOption(undefined);
+      return;
+    }
+
+    const correctOption = options.find((option) => option.correct);
+
+  };
 
   const title = challenge.type === 'ASSIST' ? "Select the correct meaming"
     : challenge.question;
@@ -74,11 +99,11 @@ export function Quiz({
           </div>
         </div>
       </div>
-      <Footer 
-      disabled={!selectedOption}
-      status={"completed"|| status}
-      onCheck={()=>{}}
-      
+      <Footer
+        disabled={!selectedOption}
+        status={"completed" || status}
+        onCheck={() => { onContinue }}
+
       />
     </>
   )

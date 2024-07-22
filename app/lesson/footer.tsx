@@ -4,7 +4,7 @@ import { CheckCircle, XCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-type FooterProps = {
+type Props = {
   onCheck: () => void;
   status: "correct" | "wrong" | "none" | "completed";
   disabled?: boolean;
@@ -16,7 +16,7 @@ export const Footer = ({
   status,
   disabled,
   lessonId,
-}: FooterProps) => {
+}: Props) => {
   useKey("Enter", onCheck, {}, [onCheck]);
   const isMobile = useMedia("(max-width: 1024px)");
 

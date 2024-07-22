@@ -15,4 +15,6 @@
 - [Drizzle ORM](https://orm.drizzle.team/docs/get-started-postgresql#neon)
 - [Zustand](https://www.npmjs.com/package/zustand)
 - [ElevenLabs IA](https://elevenlabs.io/)
+- [React Confetti](https://www.npmjs.com/package/react-confetti)
 
+## Deploy Application

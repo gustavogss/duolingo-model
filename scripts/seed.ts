@@ -25,22 +25,22 @@ const main = async () => {
       {
         id: 1,
         title: "English",
-        imageSrc: "./assets/us.svg",
+        imageSrc: "/us.svg",
       },
       {
         id: 2,
         title: "Spanish",
-        imageSrc: "./assets/es.svg",
+        imageSrc: "/es.svg",
       },
       {
         id: 3,
         title: "German",
-        imageSrc: "./assets/ger.svg",
+        imageSrc: "/ger.svg",
       },
       {
         id: 4,
         title: "Italian",
-        imageSrc: "./assets/it.svg",
+        imageSrc: "/it.svg",
       },
     ]);
 
@@ -114,24 +114,24 @@ const main = async () => {
     await db.insert(schema.challengeOptions).values([
       {
         challengeId: 1,
-        imageSrc: "./assets/man.svg",
+        imageSrc: "/man.svg",
         correct: true,
         text: "the man",
-        audioSrc: "./assets/audio/the-man.mp3",
+        audioSrc: "/the-man.mp3",
       },
       {
         challengeId: 1,
-        imageSrc: "./assets/woman.svg",
+        imageSrc: "/woman.svg",
         correct: false,
         text: "the woman",
-        audioSrc: "./assets/audio/the-woman.mp3",
+        audioSrc: "/the-woman.mp3",
       },
       {
         challengeId: 1,
-        imageSrc: "./assets/robot.svg",
+        imageSrc: "/robot.svg",
         correct: false,
         text: "the robot",
-        audioSrc: "./assets/audio/the-robot.mp3",
+        audioSrc: "/the-robot.mp3",
       },
     ]);
 
@@ -140,43 +140,43 @@ const main = async () => {
         challengeId: 2,
         correct: true,
         text: "the man",
-        audioSrc: "./assets/audio/the-man.mp3",
+        audioSrc: "/the-man.mp3",
       },
       {
         challengeId: 2,
         correct: false,
         text: "the woman",
-        audioSrc: "./assets/audio/the-woman.mp3",
+        audioSrc: "/the-woman.mp3",
       },
       {
         challengeId: 2,
         correct: false,
         text: "the robot",
-        audioSrc: "./assets/audio/the-robot.mp3",
+        audioSrc: "/the-robot.mp3",
       },
     ]);
 
     await db.insert(schema.challengeOptions).values([
       {
         challengeId: 3,
-        imageSrc: "./assets/man.svg",
+        imageSrc: "/man.svg",
         correct: false,
         text: "the man",
-        audioSrc: "./assets/audio/the-man.mp3",
+        audioSrc: "/the-man.mp3",
       },
       {
         challengeId: 3,
-        imageSrc: "./assets/woman.svg",
+        imageSrc: "/woman.svg",
         correct: false,
         text: "the woman",
-        audioSrc: "./assets/audio/the-woman.mp3",
+        audioSrc: "/the-woman.mp3",
       },
       {
         challengeId: 3,
-        imageSrc: "./assets/robot.svg",
+        imageSrc: "/robot.svg",
         correct: true,
         text: "the robot",
-        audioSrc: "./assets/audio/the-robot.mp3",
+        audioSrc: "/the-robot.mp3",
       },
     ]);
 

@@ -28,7 +28,7 @@ export function UserProgress({ activeCourse, hearts, points, hasActiveSubscripti
       <Link href="/shop" >
         <Button variant="ghost" className="text-orange-500">
           <Image
-            src="./assets/points.svg"
+            src="/points.svg"
             alt="Points"
             className="mr-2"
             width={28}
@@ -40,7 +40,7 @@ export function UserProgress({ activeCourse, hearts, points, hasActiveSubscripti
       <Link href="/shop" >
         <Button variant="ghost" className="text-rose-500">
           <Image
-            src="./assets/heart.svg"
+            src="/heart.svg"
             alt="Hearts"
             className="mr-2"
             width={22}

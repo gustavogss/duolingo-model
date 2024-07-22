@@ -8,14 +8,14 @@ export function QuestionBubble({ question }: QuestionBubleProps) {
   return (
     <div className="flex items-center gap-x-4 mb-6">
       <Image
-        src="assets/mascot.svg"
+        src="/mascot.svg"
         alt="Mascot"
         width={60}
         height={60}
         className="hidden lg:block"
       />
       <Image
-        src="assets/mascot.svg"
+        src="/mascot.svg"
         alt="Mascot"
         width={40}
         height={40}

@@ -1,6 +1,6 @@
-# Duolingo
+# LMS Model
 
-- LMS Gameficada tipo Duolingo
+- LMS Gameficada para idiomas
 
 ## Stacks :robot:
 
@@ -16,6 +16,7 @@
 - [Zustand](https://www.npmjs.com/package/zustand)
 - [ElevenLabs IA](https://elevenlabs.io/)
 - [React Confetti](https://www.npmjs.com/package/react-confetti)
+- [Stripe](https://docs.stripe.com/payments/online-payments)
 
 ## Deploy Application
 

@@ -5,14 +5,14 @@ import { neon } from "@neondatabase/serverless";
 import * as schema from "../db/schema";
 
 const sql = neon(process.env.DATABASE_URL!);
-// @ts-ignore
+
 const db = drizzle(sql, { schema });
 
 const main = async () => {
   try {
     console.log("Seeding database");
 
-    // Delete all existing data
+   
     await Promise.all([
       db.delete(schema.userProgress),
       db.delete(schema.challenges),
@@ -23,7 +23,6 @@ const main = async () => {
       db.delete(schema.userSubscription),
     ]);
 
-    // Insert courses
     const courses = await db
       .insert(schema.courses)
       .values([

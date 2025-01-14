@@ -10,7 +10,7 @@ import { PracticeModal } from "@/components/modals/practice-modal";
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Modelingo",
+  title: "LMS Model",
   description: "Aprenda e pratique seu idioma",
 };
 
